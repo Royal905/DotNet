@@ -1,109 +1,75 @@
-# The .NET Project System for Visual Studio
+## Intro to Web Development with .NET 
+Welcome to the Intro to Web Development with .NET GitHub repository! We’re excited to take you along with us as we build awesome projects and learn all about the wonderful world of web development.
 
-| Release             | Build                   | Compliance                   | Publish                   | Localization
-|---------------------|:-----------------------:|:----------------------------:|:-------------------------:|:-------------------------:
-| [main][MainBranch]  | [![MainBuild]][MainRun] | [![MainCompliance]][MainRun] | [![MainPublish]][MainRun] | [![MainLocalization]][MainRun]
+Here, you'll find a 6-part series of lessons and projects to get you started building web applications with .NET! 
 
-This repository contains the .NET Project System for [Visual Studio](https://visualstudio.microsoft.com/vs/) that is written on top of the [Common Project System (CPS)](https://github.com/microsoft/VSProjectSystem) framework. In Visual Studio 2017, Visual Studio 2019, and Visual Studio 2022, this project system is used for .NET Core [SDK-style] (C#, F# and Visual Basic) and Shared Projects (C# and Visual Basic) project types. In the [long term](docs/repo/roadmap.md), this project system will be the basis for all C#, F# and Visual Basic project types. For a list of feature differences between the project systems, see [Feature Comparison](docs/feature-comparison.md).
+> **Note**
+> The content in this repo is part of a free, 6-part e-mail series that will teach you something new every week. The e-mails include introductions to the content in these lessons. If you came here directly and haven't signed up for the e-mails, you can do that here: https://aka.ms/WebLearningSeries/signup  
 
-The legacy C# and Visual Basic project systems (*csproj.dll* and *msvbprj.dll*) first shipped with Visual Studio .NET in 2002. They have served us well but are:
+## Video Introduction
+[<img src="/images/intro-thumbnail.jpg" alt="drawing" width="700"/>](https://www.youtube.com/watch?v=joKb1gvzP9U "Intro to .NET Web Dev")
+> 🎥 Click the image above for a video about the series!
 
-- Native and COM-based
-- Single threaded and bound to the UI thread
-- Hard to extend outside of aggregation via the use of `<ProjectTypeGuids>` and [sub types (flavors)](https://learn.microsoft.com/visualstudio/extensibility/internals/project-types)
-- Separate implementations for C# and Visual Basic projects
+## How-to 
+To use this curriculum on your own, fork the entire repo and go into the numbered folders to access the lessons and projects. This series is designed to take 6 weeks, about 1 week per lesson, but feel free to complete it at your own pace.
 
-The current .NET Project System is:
+### Codespace
+You can also complete the lesson from your browser using GitHub Codespaces. To open a Codespace, simply select the green **Code** button. Then click the **+** to create a Codespace on the main branch.
 
-- Managed and managed-interface based
-- Multi-threaded, scalable, and responsive
-- Easy to extend and compose via the Managed Extensibility Framework (MEF). Many parties, including 3rd parties, can contribute to a single project system.
-- A single implementation for C#, F# and Visual Basic projects
+## Lessons 
+|     |                       Lesson Name                       | Learning Objectives                                                                                                                 |                                                         Linked Lesson                                                          | 
+| :-: | :------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------: | 
+| 01  |                     Welcome                      |           Introduction to C#, .NET, and web development with .NET           | [Welcome to the Intro to Web Dev with .NET series](/1-welcome) | 
+| 02  |                     C#                      |             A quick runthrough of C# attributes, syntax, and OOP             |                            [C# Crash Course](/2-csharp)                             | 
+| 03  |                     Razor Pages                      |                             Learn about ASP.NET Core, Razor Pages, and build a pizza website 🍕                              |                       [Build a Pizza Website with Razor Pages](/3-razor-pages)                       | 
+| 04  |                        Minimal APIs                         |                         Build a Minimal API backend for your pizza website                          |                                       [Build an HTTP backend with Minimal APIs](/4-minimal-api)                                        | 
+| 05  |                        Blazor                         |                         Learn Blazor and build an interactive Connect Four game                          |                              [Introducing Blazor Web Applications](/5-blazor)                               | 
+| 06  |                        Publish to Azure                         |                        Learn how to publish your project to the cloud☁️                        |                                 [Publish your Web App to Azure](/6-publish)                                  | 
+ 
+ ## Open in Codespaces
 
-## What is a project system?
-A project system sits between a project file on disk (for example, *.csproj* and *.vbproj*) and various Visual Studio features including, but not limited to, Solution Explorer, designers, the debugger, language services, build and deployment. Almost all interaction that occurs with files contained in a project file happens through the project system.
+ You can open this repo in GitHub Codespaces without installing anything on your computer.
 
-There are many technologies that come together to make up the .NET Project System:
+ [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=dotnet/intro-to-dotnet-web-dev)
 
-- [MSBuild](https://github.com/dotnet/msbuild) provides the build engine and file format.
-- [SDK](https://github.com/dotnet/sdk) provides the command-line interface for building, running and interacting with .NET projects, along with the necessary MSBuild tasks and targets.
-- [Common Project System](https://github.com/microsoft/VSProjectSystem) provides the base building blocks for the project system including (but not limited to) project tree, build and debugger coordination and Visual Studio integration.
-- [Roslyn](https://github.com/dotnet/roslyn) provides C# and Visual Basic language support including compilers, IntelliSense, refactorings, analyzers, and code fixes.
-- [Visual F# tools](https://github.com/dotnet/fsharp) provides F# language support.
+## Help Resources 
+There's a few places you can go for help and more information on the topics covered in this repository.
+### Documentation
+1. [C# documentation](https://aka.ms/WebLearningSeries-git-csharpDocs)
+1. [.NET documentation](https://aka.ms/WebLearningSeries-git-dotnetDocs)
+1. [ASP.NET documentation, Razor Pages](https://aka.ms/WebLearningSeries-git-razorDocs)
+1. [ASP.NET documentation, Minimal APIs](https://aka.ms/WebLearningSeries-git-minapiDocs)
+1. [ASP.NET documentation, Blazor](https://aka.ms/WebLearningSeries-git-blazorDocs)
+1. [Azure documentation](https://aka.ms/WebLearningSeries-git-azureDocs)
 
-![image](docs/repo/images/solution-explorer.png)
+### Beginner Video Series
+1. [C# for Beginners](https://aka.ms/WebLearningSeries-git-csharpvids)
+1. [.NET for Beginners](https://aka.ms/WebLearningSeries-git-dotnetvids)
+1. [ASP.NET for Beginners](https://aka.ms/WebLearningSeries-git-aspvids)
+1. [Web APIs for Beginners](https://aka.ms/WebLearningSeries-git-apivids)
 
-## How do I build the repository?
-This repository is built on .NET Framework and requires the .NET Framework version of [MSBuild](https://learn.microsoft.com/visualstudio/msbuild/msbuild?view=vs-2022) to build successfully. Additionally, there is a dependency on the [Visual Studio SDK](https://learn.microsoft.com/visualstudio/extensibility/starting-to-develop-visual-studio-extensions?view=vs-2022) as the .NET Project System is bundled as a Visual Studio Extension for deployment into Visual Studio.
+## How to leave feedback 
+To leave us feedback on this learning series, please fill out our [survey](https://aka.ms/WebLearningSeries-git-survey) or file an issue in this repository.
+ 
 
-Here is how to acquire the necessary components:
-- Install the latest [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-  - Select these workloads during installation:
-    - .NET desktop build tools
-    - Visual Studio extension development
+## Learn More & Connect with us 
 
-![image](docs/repo/images/workloads-for-building-the-repo.png)
+Start a .NET [Learning Path](https://aka.ms/WebLearningSeries-git-MSLearn)
 
-After the necessary components are installed, simply run the `build.cmd` batch file at the root of the repository. This will build, test, and bundle the repository appropriately.
+Find a .NET user group & join a .NET events at our [Community Page](https://aka.ms/WebLearningSeries-git-community).
 
-### **build.cmd** flags
-All the command line arguments provided to **build.cmd** get forwarded to MSBuild. There are some special properties we've set up for building this repo.
-- For Projects:
-  - `/p:SrcProjects=[true or false]`: Includes the projects within the **src** directory. Default: `true`
-  - `/p:TestProjects=[true or false]`: Includes the projects within the **tests** directory. Default: `true`
-  - `/p:SetupProjects=[true or false]`: Includes the projects within the **setup** directory. Default: `true`
-- For Targets:
-  - `/p:Restore=[true or false]`: Runs the **Restore** target to acquire project dependencies. Default: `true`
-  - `/p:Build=[true or false]`: Runs the **Build** target to compile the projects into assemblies. Default: `true`
-  - `/p:Rebuild=[true or false]`: Runs the **Rebuild** target which cleans and builds the projects. Default: `false`
-  - `/p:Test=[true or false]`: Runs the **Test** target to execute the xUnit test projects. Default: `true`
-  - `/p:Pack=[true or false]`: Runs the **Pack** target to bundle the projects into NuGet packages. Default: `true`
+Follow us [@dotnet on Twitter](https://aka.ms/WebLearningSeries-git-twitter)
 
-## How do I engage and contribute?
-We welcome you to try things out, [file issues](https://github.com/dotnet/project-system/issues), make feature requests, and join us in design conversations. If you are looking for something to work on, take a look at our [help wanted issues](https://github.com/dotnet/project-system/issues?q=is%3Aopen+is%3Aissue+label%3A%22Help+Wanted%22) for a great place to start. Also, check out our [contributing guide](CONTRIBUTING.md).
+![.NET Bot](/images/dotnet-bot_jetpack-faceing-right.svg)
 
-This project has adopted a code of conduct adapted from the [Contributor Covenant](https://www.contributor-covenant.org) to clarify expected behavior in our community. This code of conduct has been [adopted by many other projects](https://www.contributor-covenant.org/adopters/). For more information, see [Contributors Code of conduct](https://github.com/dotnet/home/blob/master/guidance/be-nice.md).
 
-## Trademarks
+## .NET Foundation
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party's policies.
+.NET Interactive Notebooks for C# is a [.NET Foundation](https://www.dotnetfoundation.org/projects) project.
 
-## Data Collection
+There are many .NET related projects on GitHub.
 
-The software may collect information about you and your use of the software and send it to Microsoft. Microsoft may use this information to provide services and improve our products and services. You may turn off the telemetry as described in ["Visual Studio Customer Experience Improvement Program"](https://learn.microsoft.com/visualstudio/ide/visual-studio-experience-improvement-program). There are also some features in the software that may enable you and Microsoft to collect data from users of your applications. If you use these features, you must comply with applicable law, including providing appropriate notices to users of your applications together with a copy of Microsoft’s privacy statement. Our privacy statement is located at https://go.microsoft.com/fwlink/?LinkID=824704. You can learn more about data collection and use in the help documentation and our privacy statement. Your use of the software operates as your consent to these practices.
+- [.NET home repo](https://github.com/Microsoft/dotnet) - links to 100s of .NET projects, from Microsoft and the community.
+- [ASP.NET Core home](https://docs.microsoft.com/aspnet/core/) - the best place to start learning about ASP.NET Core.
 
-<!-- References -->
-
-[MainBranch]:       https://github.com/dotnet/project-system/tree/main
-[MainBuild]:        https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=main&label=main&stageName=Build
-[MainCompliance]:   https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=main&label=main&stageName=Compliance
-[MainPublish]:      https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=main&label=main&stageName=Publish
-[MainLocalization]: https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=main&label=main&stageName=Localization
-[MainRun]:          https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=main
-
-[1611Branch]: https://github.com/dotnet/project-system/tree/dev16.11.x
-[1611Build]:  https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev16.11.x&label=dev16.11.x
-[1611Run]:    https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=dev16.11.x
-
-[170Branch]: https://github.com/dotnet/project-system/tree/dev17.0.x
-[170Build]:  https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.0.x&label=dev17.0.x
-[170Run]:    https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=dev17.0.x
-
-[171Branch]: https://github.com/dotnet/project-system/tree/dev17.1.x
-[171Build]:  https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.1.x&label=dev17.1.x
-[171Run]:    https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=dev17.1.x
-
-[172Branch]: https://github.com/dotnet/project-system/tree/dev17.2.x
-[172Build]:  https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.2.x&label=dev17.2.x
-[172Run]:    https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=dev17.2.x
-
-[173Branch]: https://github.com/dotnet/project-system/tree/dev17.3.x
-[173Build]:  https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.3.x&label=dev17.3.x
-[173Run]:    https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=dev17.3.x
-
-[174Branch]:       https://github.com/dotnet/project-system/tree/dev17.4.x
-[174Build]:        https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.4.x&label=dev17.4.x&stageName=Build
-[174Compliance]:   https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.4.x&label=dev17.4.x&stageName=Compliance
-[174Publish]:      https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.4.x&label=dev17.4.x&stageName=Publish
-[174Localization]: https://dev.azure.com/devdiv/DevDiv/_apis/build/status/DotNet/project-system/DotNet-Project-System?branchName=dev17.4.x&label=dev17.4.x&stageName=Localization
-[174Run]:          https://dev.azure.com/devdiv/DevDiv/_build/latest?definitionId=9675&branchName=dev17.4.x
+This project has adopted the code of conduct defined by the [Contributor Covenant](http://contributor-covenant.org/) to clarify expected behavior in our community. For more information, see the [.NET Foundation Code of Conduct](http://www.dotnetfoundation.org/code-of-conduct).
